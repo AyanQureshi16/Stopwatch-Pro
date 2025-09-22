@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Pro Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="particles"></div>
+  
+  <div class="sound-toggle" onclick="toggleSound()" title="Toggle Sound">
+    <i class="fas fa-volume-up" id="soundIcon"></i>
+  </div>
+
+  <div class="container" id="container">
+    <div class="header">
+      <h1>⚡ STOPWATCH PRO</h1>
+      <p class="subtitle">Precision Timing</p>
+    </div>
+    
+    <div class="time-display">
+      <div class="mainDiv">
+        <div class="time-unit">
+          <span id="minute">00</span>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-unit">
+          <span id="second">00</span>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-unit">
+          <span id="milliSecond">00</span>
+        </div>
+      </div>
+      <div class="time-labels">
+        <span>MIN</span>
+        <span>SEC</span>
+        <span>MILLISEC</span>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <button onclick="start()" id="startBtn" class="btn-start">
+        <i class="fas fa-play"></i>Start
+      </button>
+      <button onclick="stop()" class="btn-stop">
+        <i class="fas fa-pause"></i>Stop
+      </button>
+      <button onclick="reset()" class="btn-reset">
+        <i class="fas fa-redo"></i>Reset
+      </button>
+      <button onclick="lap()" id="lapBtn" class="btn-lap" disabled>
+        <i class="fas fa-flag"></i>Lap
+      </button>
+    </div>
+
+    <div class="lap-times" id="lapTimes"></div>
+  </div>
+
+  <div class="achievement" id="achievement">
+    <i class="fas fa-trophy"></i>
+    <span id="achievementText"></span>
+    <script src="app.js"></script>
+  </div>
+  </body>
+
+</html>
